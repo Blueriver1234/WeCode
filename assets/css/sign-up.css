@@ -1,0 +1,46 @@
+* {
+    font-size: 30px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 100vh;
+    background: #600a74;
+}
+
+.main {
+    padding: 20px;
+    background: #8714a0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.member {
+    margin: 5px 0;
+}
+
+#sign-up-form .item {
+    margin: 3px 0;
+}
+
+.heading {
+    margin: 0 auto;
+}
+
+.heading h1 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.item {
+    max-width: 100%;
+}
+
+.item input, button {
+    width: 100%;
+}
+
