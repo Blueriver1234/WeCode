@@ -1,0 +1,88 @@
+body {
+    background: #600a74;
+}
+
+.main {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    background: #4f085f;
+}
+
+.features {
+    width: 20%;
+}
+
+.features .container {
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.features .container .member {
+    margin: 5px 0;
+    display: flex;
+}
+
+.features .container .member .item {
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.features .icon {
+    width: 30%;
+}
+
+.features .text {
+    width: 70%;
+}
+
+.posts {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts .container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.posts .container .member1 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.posts .author-posts {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.posts .author-avatar {
+    max-height: 100%;
+    font-size: 35px;
+}
+
+.posts .author-name {
+    width: 65%;
+}
+
+.posts .container .member2 {
+    width: 10%;
+}
+
+
+
+
