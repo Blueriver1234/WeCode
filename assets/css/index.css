@@ -1,29 +1,41 @@
 body {
-    background: #600a74;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .main {
     width: 60%;
-    margin: 0 auto;
+    margin: 3rem auto;
     display: flex;
-    background: #4f085f;
+    flex: 1;
+    font-size: 1rem;
 }
 
 .features {
     width: 20%;
+    margin-left: 1.75rem;
+    padding: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 10rem;
 }
 
 .features .container {
     width: 60%;
-    margin-left: 10%;
-    margin-top: 10%;
     display: flex;
     flex-direction: column;
+    height: 5rem;
 }
 
 .features .container .member {
-    margin: 5px 0;
+    margin: 0.1rem 0;
     display: flex;
+    position: relative;
+}
+
+.features .container .member:hover .overlay{
+    display: block;
 }
 
 .features .container .member .item {
@@ -32,8 +44,7 @@ body {
     color: #000;
     display: flex;
     flex-wrap: nowrap;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 2rem;
 }
 
 .features .icon {
@@ -47,14 +58,23 @@ body {
 .posts {
     width: 80%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    color: #000;
 }
 
 .posts .container {
-    padding: 20px;
+    padding: 1rem;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0.3rem 0;
+    border-radius: 0.3rem;
+}
+
+.posts .container:hover .overlay{
+    display: block;
 }
 
 .posts .container .member1 {
@@ -63,24 +83,65 @@ body {
     width: 70%;
 }
 
+.posts .container .member1 h1 {
+    height: 2rem;
+}
+
 .posts .author-posts {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-top: 10px;
-}
-
-.posts .author-avatar {
-    max-height: 100%;
-    font-size: 35px;
 }
 
 .posts .author-name {
-    width: 65%;
+    width: 60%;
 }
 
 .posts .container .member2 {
     width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFF1F5;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.pages .container {
+    width: 30%;
+    display: flex;
+    box-shadow: none;
+}
+
+.pages .container .member button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.pages .container .member button:hover {
+    background-color: #EFF3F8;
+}
+
+footer {
+    height: 30vh;
+    width: 100%;
+    background: #192027;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer .container {
+    width: 60%;
 }
 
 
