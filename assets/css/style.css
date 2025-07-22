@@ -9,6 +9,8 @@
     font-size: 1.2rem;
     box-sizing: border-box;
     text-decoration: none;
+    outline: none;
+    border: none;
 }
 nav a {
     text-decoration: none;
@@ -47,7 +49,7 @@ nav .container .searching-bar {
     border-radius: 1rem;
     justify-content: space-between;
     padding: 0.2rem 0;
-    margin-right: 7rem;
+    margin-right: 6rem;
     margin-left: 2rem;
 }
 
@@ -85,4 +87,79 @@ nav .container .searching-bar {
 
 .sign-in:hover .overlay, .sign-up:hover .overlay, .logo:hover .overlay, .announcement:hover .overlay {
     display: block;
+}
+
+.announcement {
+    padding: 0 0.15rem;
+}
+
+.sign-in, .sign-up {
+    padding: 0 0.5rem;
+}
+
+footer {
+    height: 30vh;
+    width: 100%;
+    background: #192027;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer .container {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 30%;
+}
+
+.footer-logo .title a {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+footer .title {
+    height: 3.5rem;
+}
+
+footer h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+footer .content {
+    opacity: 0.6;
+}
+
+.footer-contact {
+    width: 20%;
+}
+
+.footer-contact .content .contact-info {
+    display: flex;
+}
+
+.footer-contact .icon {
+    margin-right: 0.5rem;
+}
+
+.footer-social-media {
+    width: 30%;
+}
+
+.footer-social-media .icon a {
+    color: #fff;
+    margin-right: 0.25rem;
+    opacity: 0.5;
+}
+
+.footer-social-media .icon a:hover {
+    opacity: 1;
 }

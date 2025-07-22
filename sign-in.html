@@ -13,32 +13,128 @@
 </head>
 <body>
     
+    <nav>
+        <div class="container">
+            <div class="logo member">                
+                <a href="./index.html">
+                    WeCode
+                    <div class="overlay"></div>
+                </a>
+            </div>
+            <div class="searching-bar member">
+                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                <input type="text" placeholder="Search something . . ." id="searching-input">
+            </div>
+            <div class="announcement member">                
+                <a href="">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="overlay"></div>
+                </a>
+            </div>
+            <div class="sign-up member">
+                <a href="./sign-up.html">
+                    Sign up
+                    <div class="overlay"></div>                
+                </a>
+            </div>
+            <div class="sign-in member">
+                <a href="./sign-in.html">
+                    Sign in
+                    <div class="overlay"></div>                    
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <div class="main">
-        <div class="member heading">
-            <h1>Sign in</h1>
-        </div>
-        <div class="member">
-            <form id="sign-in-form">
-                <div class="item">
-                    <h3>Email</h3>
-                    <input type="text" placeholder="example@gmail.com">
+        <div class="container">
+            <div class="sign-in-header">
+                <h3>Hello</h3>
+                <p>Sign in your account</p>
+            </div>
+            <div class="sign-in-form">
+                <div class="form-group">
+                    <label for="#email-input">Email:</label>
+                    <input id="email-input" placeholder="Type your registered email"></input>
                 </div>
-                <div class="item">
-                    <h3>Password</h3>
-                    <input type="password" placeholder="password">
-                </div>                              
-            </form>
-        </div>
-        <div class="member">
-            <button type="submit" id="sign-in-button">Sign in</button>
-        </div>
-        <div class="member">
-            <h3>Haven't an account yet? <a href="sign-up.html" style="color: #c1a9c6;">Sign up</a></h3>
-        </div>
-        <div class="member">
-            <button type="submit">Sign in with Google</button>
+                <div class="form-group">
+                    <label for="#password-input">Password:</label>
+                    <input id="password-input" placeholder="Type your password" type="password"></input>
+                </div>
+                <button type="submit" id="sign-in-button">Sign in</button>
+                <h5>- or -</h5>
+                <div class="sign-in-with">
+                    <button id="sign-in-with-google-button" type="submit">
+                        Sign in with <span><i class="fab fa-google"></i></span> google
+                    </button>
+                    <button id="sign-in-with-facebook-button" type="submit">
+                        Sign in with <span><i class="fab fa-facebook"></i></span> facebook
+                    </button>                    
+                </div>
+                <div class="sign-in-assist">
+                    <p>Don't have an account? <a href="./sign-up.html">Sign up</a></p>
+                </div>
+            </div>              
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="title">
+                    <a href="index.html">WeCode</a>
+                </div>
+                <div class="content">
+                    <p>Sharing content, knowledge and information about coding community</p>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="title">
+                    <h1>Contact</h1>
+                </div>
+                <div class="content">
+                    <div class="contact-info">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone-flip"></i>
+                        </div>
+                        <div class="info">
+                            0977133586
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info">
+                            admin@wecode.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social-media">
+                <div class="title">
+                    <h1>Social media</h1>
+                </div>
+                <div class="content">
+                    Follow our social medias to get the lastest news
+                </div>
+                <div class="content icon">
+                    <a href="">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>                                
+            </div>
+        </div>
+    </footer>
 
     <script src=".//assets/js/sign-in.js"></script>
 

@@ -13,6 +13,7 @@ body {
     font-size: 1rem;
 }
 
+/* features */
 .features {
     width: 20%;
     margin-left: 1.75rem;
@@ -62,6 +63,7 @@ body {
     color: #000;
 }
 
+/* posts */
 .posts .container {
     padding: 1rem;
     display: flex;
@@ -107,6 +109,7 @@ body {
     background-color: #EFF1F5;
 }
 
+/* pages */
 .pages {
     display: flex;
     align-items: center;
@@ -130,6 +133,7 @@ body {
     background-color: #EFF3F8;
 }
 
+/* footer */
 footer {
     height: 30vh;
     width: 100%;
@@ -142,7 +146,61 @@ footer {
 
 footer .container {
     width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
 }
+
+.footer-logo {
+    width: 30%;
+}
+
+.footer-logo .title a {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+footer .title {
+    height: 3.5rem;
+}
+
+footer h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+footer .content {
+    opacity: 0.6;
+}
+
+.footer-contact {
+    width: 20%;
+}
+
+.footer-contact .content .contact-info {
+    display: flex;
+}
+
+.footer-contact .icon {
+    margin-right: 0.5rem;
+}
+
+.footer-social-media {
+    width: 30%;
+}
+
+.footer-social-media .icon a {
+    color: #fff;
+    margin-right: 0.25rem;
+    opacity: 0.5;
+}
+
+.footer-social-media .icon a:hover {
+    opacity: 1;
+}
+
 
 
 
