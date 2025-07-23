@@ -18,8 +18,8 @@ nav a {
 }
 
 nav {
-    height: 9vh;
-    background-color: #3D74B6;
+    height: 12vh;
+    background-color: #0674EC;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -46,7 +46,7 @@ nav .container .searching-bar {
     display: flex;
     background: white;
     width: 55%;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     justify-content: space-between;
     padding: 0.2rem 0;
     margin-right: 6rem;
@@ -85,9 +85,12 @@ nav .container .searching-bar {
     z-index: 1;
 }
 
-.sign-in:hover .overlay, .sign-up:hover .overlay, .logo:hover .overlay, .announcement:hover .overlay {
-    display: block;
+nav .sign-in:hover a,nav .sign-up:hover a,nav .logo:hover a,nav .announcement:hover a{
+    color: #fff;
+    opacity: 0.8;
+    transition: 300ms;
 }
+
 
 .announcement {
     padding: 0 0.15rem;

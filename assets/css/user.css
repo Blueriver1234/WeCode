@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    width: 60%;
+    flex: 1;
+    margin: 5rem auto 5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 2rem 1.5rem 2rem;
+}
+
+.user-avatar img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin-bottom: 0.2rem;
+}
+
+.features .member {
+    margin-bottom: 0.2rem;
+}
+
+.features .member a {
+    color: #000;
+    font-weight: 400;
+}
+
+.features .member a:hover {
+    color: #0674EC;
+}
+
+.main .content {
+    padding: 2rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-avatar {
+    margin: 0 auto 1rem;
+}
+
+.profile-avatar img {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+#edit-avatar-button {
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    background-color: #0674EC;
+    color: #fff;
+    margin: 0 auto;
+}
+
+#edit-avatar-button .icon {
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+}
+
+
+
+

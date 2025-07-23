@@ -70,7 +70,7 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     margin: 0.3rem 0;
     border-radius: 0.3rem;
 }
@@ -87,6 +87,17 @@ body {
 
 .posts .container .member1 h1 {
     height: 2rem;
+    font-weight: 300;
+}
+
+.posts .container .member1 .title-posts {
+    padding-bottom: 0.7rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.posts .container .member1 .title-posts h1{
+    font-weight: 450;
 }
 
 .posts .author-posts {
@@ -97,6 +108,11 @@ body {
 
 .posts .author-name {
     width: 60%;
+    color: rgb(76, 139, 221);
+}
+
+.tag-posts {
+    color: #0674EC;
 }
 
 .posts .container .member2 {
@@ -107,6 +123,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #EFF1F5;
+    border-radius: 0.1rem;
 }
 
 /* pages */
@@ -115,6 +132,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: none;
+    margin-top: 1rem;
 }
 
 .pages .container {
@@ -130,7 +148,7 @@ body {
 }
 
 .pages .container .member button:hover {
-    background-color: #EFF3F8;
+    color: #0674EC;
 }
 
 /* footer */
