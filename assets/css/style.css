@@ -6,7 +6,7 @@
     padding: 0;
     font-family: "Inter";
     font-weight: 250;
-    font-size: 1.2rem;
+    font-size: clamp(0.2rem, 1vw + 0.15rem, 1.2rem);
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
@@ -18,7 +18,7 @@ nav a {
 }
 
 nav {
-    height: 12vh;
+    height: 6rem;
     background-color: #0674EC;
     display: flex;
     align-items: center;
@@ -36,16 +36,19 @@ nav .container {
 
 nav .container .member {
     position: relative;
+    height: 1.5rem;
 }
 
 nav .container .member a{
     color: #000;
+    height: 1.5rem;
 }
 
 nav .container .searching-bar {
     display: flex;
     background: white;
     width: 55%;
+    height: 1.5rem;
     border-radius: 0.5rem;
     justify-content: space-between;
     padding: 0.2rem 0;
@@ -58,6 +61,7 @@ nav .container .searching-bar {
     opacity: 0.5;
     height: fit-content;
 }
+
 
 #searching-input {
     width: 90%;
@@ -101,7 +105,7 @@ nav .sign-in:hover a,nav .sign-up:hover a,nav .logo:hover a,nav .announcement:ho
 }
 
 footer {
-    height: 30vh;
+    height: 15rem;
     width: 100%;
     background: #192027;
     display: flex;
