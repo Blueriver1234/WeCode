@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeCode</title>    <link rel="stylesheet" href=".//assets/css/style.css">
-    <link rel="stylesheet" href=".//assets/css/sign-up.css">
+    <title>WeCode</title>    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sign-up.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
     <nav>
         <div class="container">
             <div class="logo member">                
-                <a href="./index.html">
+                <a href="index.html">
                     WeCode
                 </a>
             </div>
@@ -31,12 +31,12 @@
                 </a>
             </div>
             <div class="sign-up member" id="sign-up">
-                <a href="./sign-up.html">
+                <a href="sign-up.html">
                     Sign up             
                 </a>
             </div>
             <div class="sign-in member">
-                <a href="./sign-in.html">
+                <a href="sign-in.html">
                     Sign in                 
                 </a>
             </div>
@@ -49,34 +49,38 @@
                 <h3>Hello</h3>
                 <p>Sign up your account</p>
             </div>
-            <div class="sign-up-form">
+            <form class="sign-up-form">
                 <div class="form-group">
-                    <label for="#user-name-input">User name:</label>
-                    <input id="user-name-input" placeholder="Type your user name"></input>
+                    <label for="user-name-input">User name:</label>
+                    <input type="text" id="user-name-input" placeholder="Type your user name" required>
                 </div>                
                 <div class="form-group">
-                    <label for="#email-input">Email:</label>
-                    <input id="email-input" placeholder="Type your registered email"></input>
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input" placeholder="Type your registered email" required>
                 </div>
                 <div class="form-group">
-                    <label for="#password-input">Password:</label>
-                    <input id="password-input" placeholder="Type your password" type="password"></input>
+                    <label for="password-input">Password:</label>
+                    <input id="password-input" placeholder="Type your password" type="password" required>
                 </div>
                 <div class="form-group">
-                    <label for="#repeat-password-input">Repeat password:</label>
-                    <input id="repeat-password-input" placeholder="Type your password again" type="password"></input>
-                </div>                
+                    <label for="repeat-password-input">Repeat password:</label>
+                    <input id="repeat-password-input" placeholder="Type your password again" type="password" required>
+                </div>  
+
+                <!-- NEW: Div for displaying error messages -->
+                <div id="error-message" style="color: red; margin-top: 10px; text-align: center;"></div>
+
                 <button type="submit" id="sign-up-button">Sign up</button>
                 <h5>- or -</h5>
                 <div class="sign-up-with">
-                    <button id="sign-up-with-google-button" type="submit">
+                    <button id="sign-up-with-google-button" type="button">
                         Sign up with <span><i class="fab fa-google"></i></span> google
                     </button>                 
                 </div>
                 <div class="sign-up-assist">
-                    <p>Already have an account? <a href="./sign-in.html">Sign in</a></p>
+                    <p>Already have an account? <a href="sign-in.html">Sign in</a></p>
                 </div>
-            </div>              
+            </form>              
         </div>
     </div>
 
@@ -138,7 +142,7 @@
         </div>
     </footer>
 
-    <script src=".//assets/js/sign-up.js"></script>
+    <script type="module" src="assets/js/sign-up.js"></script>
 
 </body>
 </html>
