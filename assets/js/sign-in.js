@@ -58,7 +58,7 @@ signInForm.addEventListener("submit", async (e) => {
         console.log("User info stored in localStorage:", userInfo);
 
         alert("Signed in successfully!"); 
-        window.location.href = "/index.html";
+        window.location.href = "./index.html";
 
     } catch (error) {
         console.error("Sign in failed:", error.code, error.message);

@@ -55,7 +55,7 @@ signUpForm.addEventListener("submit", async (e) => { // Mark the function as asy
     });
 
     console.log("Account created successfully. Redirecting to sign-in page.");
-    window.location.href = "/sign-in.html";
+    window.location.href = "./sign-in.html";
 
   } catch (error) {
     console.error("Registration failed:", error.code, error.message);
