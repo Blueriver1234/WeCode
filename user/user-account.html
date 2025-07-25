@@ -6,6 +6,7 @@
     <title>WeCode-User</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/user/user.css">
+    <link rel="stylesheet" href="../assets/css/user/user-account.css">
     <link rel="stylesheet" href="../assets/css/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
     <nav>
         <div class="container">
             <div class="logo member">                
-                <a href="./index.html">
+                <a href="../index.html">
                     WeCode
                 </a>
             </div>
@@ -32,12 +33,12 @@
                 </a>
             </div>
             <div class="sign-up member" id="sign-up">
-                <a href="./sign-up.html">
+                <a href="../sign-up.html">
                     Sign up             
                 </a>
             </div>
             <div class="sign-in member">
-                <a href="./sign-in.html">
+                <a href="../sign-in.html">
                     Sign in                 
                 </a>
             </div>
@@ -52,15 +53,15 @@
             </div>
             <div class="member current-site">
                 <i class="fa-solid fa-gear"></i>
-                <a href="">Account</a>
+                <a href="./user-account.html">Account</a>
             </div>
             <div class="member">
                 <i class="fa-solid fa-book"></i>
-                <a href="">Posts</a>
+                <a href="./user-posts.html">Posts</a>
             </div>
             <div class="member">
                 <i class="fa-solid fa-bell"></i>
-                <a href="">Notifications</a>
+                <a href="./user-notifications.html">Notifications</a>
             </div>
         </div>
     </div>
@@ -83,11 +84,17 @@
                 <h2>Your account's information</h2>
                 <p><span>User name:</span> Trần Văn Tiến</p>
                 <p><span>Email:</span> blueriver2512@gmail.com</p>
-                <p><span>Friends:</span> 10</p>
-                <p><span>Post number:</span> 10</p>
-                <p><span>Likes gained:</span> 10k</p>
-                <p><span>Replies gained:</span> 100</p>
-                <p><span>Joined in:</span> 23/07/2025</p>
+                <div class="account-assistance">
+                    <button type="submit" id="change_user_name_button">Change user name <i class="fa-solid fa-user"></i></button>
+                    <button type="submit" id="change_email_button">Change email <i class="fa-solid fa-envelope"></i></button>
+                    <button type="submit" id="change_password_button">Change password <i class="fa-solid fa-key"></i></button>
+                </div>
+                <input type="text" id="change_user_name_input" placeholder="Type your new user name">
+                <input type="text" id="change_email_input" placeholder="Type your new email">
+                <input type="password" id="change_password_input" placeholder="Type your new password">
+                <input type="password" id="change_password_again_input" placeholder="Type your new password again">
+                <button type="submit" id="submit_button">Submit <i class="fa-solid fa-check"></i></button>
+                <button type="submit" id="cancel_button">Cancel <i class="fa-solid fa-xmark"></i></button>
             </div>
         </div>
     </div>
@@ -150,6 +157,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../assets/js/user/user-account.js"></script>
 
 
 </body>
