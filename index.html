@@ -34,15 +34,17 @@
                 </a>
             </div>
             <div class="sign-up member" id="sign-up">
-                <a href="./sign-up.html">
+                <a href="./sign-up.html" class="sign-links">
                     Sign up
                 </a>
             </div>
             <div class="sign-in member">
-                <a href="./sign-in.html">
+                <a href="./sign-in.html" class="sign-links">
                     Sign in
                 </a>
             </div>
+            <span id="userInfo"></span>
+            <div id="logoutContainer" style="display:inline-block;"></div>
         </div>
     </nav>
 
@@ -367,7 +369,6 @@
         </div>
         <div class="categories">
             <button id="new_post_button"><i class="fa-solid fa-plus"></i> New post</button>
-
         </div>
     </div>
 
@@ -432,6 +433,8 @@
     </footer>
 
     <script type="module" src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/logout.js"></script>
+
 </body>
 
 </html>
