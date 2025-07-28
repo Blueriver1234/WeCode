@@ -1,0 +1,122 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.main {
+    display: flex;
+    width: 60%;
+    flex: 1;
+    margin: 5rem auto 5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    max-height: 25rem;
+}
+
+.menu {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.menu .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+}
+
+.menu .member {
+    margin-right: 1.5rem;
+    padding: 1rem 0 1rem;
+}
+
+.current-site {
+    border-bottom: 0.05rem;
+    border-bottom-color: #0674EC;
+    border-bottom-style: solid;
+}
+
+.current-site i, .menu .container .current-site a {
+    color: #0674EC;
+}
+
+.menu .member a {
+    color: #000;
+    font-weight: 400;
+}
+
+.menu .member:hover a, .menu .member:hover i {
+    color: #0674EC;
+}
+
+.main .content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.author {
+    padding: 2rem 3rem 4rem;
+    width: 30%;
+    border-right: 0.05rem;
+    border-right-color: #c7c7c7;
+    border-right-style: solid;
+}
+
+.profile-avatar {
+    margin: 0 auto 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.author h4 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#edit-avatar-button {
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    background-color: #0674EC;
+    color: #fff;
+    margin: 0 auto;
+}
+
+#edit-avatar-button .icon {
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+}
+
+.author-info {
+    padding: 2rem 3rem 4rem;  
+    width: fit-content;
+}
+
+.author-info h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.author-info p {
+    margin-bottom: 0.1rem;
+    font-weight: 300;
+}
+
+.author-info span {
+    font-weight: 500;
+}
+
+
+
+
+
