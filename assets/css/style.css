@@ -6,15 +6,17 @@
     padding: 0;
     font-family: "Inter";
     font-weight: 250;
-    font-size: clamp(0.2rem, 1vw + 0.15rem, 1.2rem);
+    font-size: clamp(0.1rem, 1vw + 0.15rem, 1.2rem);
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
     border: none;
 }
+
 nav a {
     text-decoration: none;
     font-size: 1.5rem;
+    font-weight: 350;
 }
 
 nav {
@@ -24,6 +26,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    flex-wrap: nowrap;
 }
 
 nav .container {
@@ -39,9 +42,13 @@ nav .container .member {
     height: 1.5rem;
 }
 
-nav .container .member a{
+nav .container .member a {
     color: #000;
     height: 1.5rem;
+}
+
+nav .container .logo {
+    margin-right: 2rem;
 }
 
 nav .container .searching-bar {
@@ -52,8 +59,6 @@ nav .container .searching-bar {
     border-radius: 0.5rem;
     justify-content: space-between;
     padding: 0.2rem 0;
-    margin-right: 6rem;
-    margin-left: 2rem;
 }
 
 #search-icon {
@@ -69,7 +74,7 @@ nav .container .searching-bar {
     border: none;
     outline: 0;
     margin-right: 2rem;
-    
+
 }
 
 #searching-button {
@@ -89,7 +94,10 @@ nav .container .searching-bar {
     z-index: 1;
 }
 
-nav .sign-in:hover a,nav .sign-up:hover a,nav .logo:hover a,nav .announcement:hover a{
+nav .sign-in:hover a,
+nav .sign-up:hover a,
+nav .logo:hover a,
+nav .announcement:hover a {
     color: #fff;
     opacity: 0.8;
     transition: 300ms;
@@ -98,10 +106,21 @@ nav .sign-in:hover a,nav .sign-up:hover a,nav .logo:hover a,nav .announcement:ho
 
 .announcement {
     padding: 0 0.15rem;
+    margin-left: 6rem;
 }
 
-.sign-in, .sign-up {
+.sign-in,
+.sign-up {
     padding: 0 0.5rem;
+}
+
+.sign-in a,
+.sign-up a {
+    white-space: nowrap;
+}
+
+#username {
+    font-size: 1rem;
 }
 
 footer {
