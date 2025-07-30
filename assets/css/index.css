@@ -33,6 +33,10 @@ body {
     border-radius: 0.3rem;
 }
 
+.posts .container:hover {
+    cursor: pointer;
+}
+
 .posts .container:hover .overlay {
     display: block;
 }
@@ -112,6 +116,10 @@ body {
     font-weight: 400;
 }
 
+#new_post_button:hover {
+    cursor: pointer;
+}
+
 /* pages */
 .pages {
     display: flex;
@@ -135,6 +143,11 @@ body {
 
 .pages .container .member button:hover {
     color: #0674EC;
+}
+
+.pages .container .member button:hover {
+    color: #0674EC;
+    cursor: pointer;
 }
 
 /* footer */
