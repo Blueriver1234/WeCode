@@ -4,15 +4,6 @@ body {
     min-height: 100dvh;
 }
 
-.main {
-    display: flex;
-    width: 60%;
-    flex: 1;
-    margin: 5rem auto 5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-    max-height: 25rem;
-}
-
 .menu {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }

@@ -8,6 +8,14 @@
     width: 100%;
 }
 
+.main {
+    display: flex;
+    width: 60%;
+    flex: 1;
+    margin: 5rem auto 5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
 .author {
     padding: 2rem 3rem 4rem;
     width: 30%;
@@ -43,6 +51,10 @@
     background-color: #0674EC;
     color: #fff;
     margin: 0 auto;
+}
+
+#edit-avatar-button:hover {
+    cursor: pointer;
 }
 
 #edit-avatar-button .icon {
@@ -88,6 +100,12 @@
     margin: 0 0.5rem;
 }
 
+#change_user_name_button:hover,
+#change_email_button:hover,
+#change_password_button:hover {
+    cursor: pointer;
+}
+
 
 #change_user_name_input,
 #change_email_input,
@@ -117,4 +135,9 @@
 
 #cancel_button {
     background-color: #FB4141;
+}
+
+#submit_button:hover,
+#cancel_button:hover {
+    cursor: pointer;
 }
