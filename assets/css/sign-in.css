@@ -2,12 +2,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: #EFF1F5;
 }
 
 .main {
     margin: 3rem auto 5rem;
     width: 30%;
     flex: 1;
+    background: #fff;
 }
 
 .main .container {

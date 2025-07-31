@@ -1,5 +1,5 @@
 body {
-    background: #fff;
+    background: #EFF1F5;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -31,6 +31,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     margin-bottom: 0.3rem;
     border-radius: 0.3rem;
+    background-color: #fff;
 }
 
 .posts .container:hover {
@@ -98,7 +99,7 @@ body {
     margin-left: 1rem;
     display: flex;
     flex-direction: column;
-    padding: 0 ;
+    padding: 0;
 }
 
 #new_post_button {
@@ -133,6 +134,7 @@ body {
     width: 30%;
     display: flex;
     box-shadow: none;
+    background: #EFF1F5;
 }
 
 .pages .container .member button {
