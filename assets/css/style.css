@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    font-weight: 250;
+    font-size: clamp(0.1rem, 1vw + 0.15rem, 1.2rem);
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 350;
+}
+
+nav {
+    height: 6rem;
+    background-color: #0674EC;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    flex-wrap: nowrap;
+}
+
+nav .container {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    max-height: 50%;
+}
+
+nav .container .member {
+    position: relative;
+    height: 1.5rem;
+}
+
+nav .container .member a {
+    color: #000;
+    height: 1.5rem;
+}
+
+nav .container .logo {
+    margin-right: 2rem;
+}
+
+nav .container .searching-bar {
+    display: flex;
+    background: white;
+    width: 55%;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+}
+
+#search-icon {
+    padding: 0 1rem;
+    opacity: 0.5;
+    height: fit-content;
+}
+
+
+#searching-input {
+    width: 90%;
+    font-size: 1rem;
+    border: none;
+    outline: 0;
+    margin-right: 2rem;
+
+}
+
+#searching-button {
+    width: 5%;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    top: -0rem;
+    left: -0px;
+    bottom: -0px;
+    right: -0px;
+    opacity: 0.3;
+    border-radius: 0.3rem;
+    z-index: 1;
+}
+
+nav .sign-in:hover a,
+nav .sign-up:hover a,
+nav .logo:hover a,
+nav .announcement:hover a {
+    color: #fff;
+    opacity: 0.8;
+    transition: 300ms;
+}
+
+
+.announcement {
+    padding: 0 0.15rem;
+    margin-left: 6rem;
+}
+
+.sign-in,
+.sign-up {
+    padding: 0 0.5rem;
+}
+
+.sign-in a,
+.sign-up a {
+    white-space: nowrap;
+}
+
+#username {
+    font-size: 1rem;
+}
+
+footer {
+    height: 15rem;
+    width: 100%;
+    background: #192027;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer .container {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 30%;
+}
+
+.footer-logo .title a {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+footer .title {
+    height: 3.5rem;
+}
+
+footer h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+footer .content {
+    opacity: 0.6;
+}
+
+.footer-contact {
+    width: 20%;
+}
+
+.footer-contact .content .contact-info {
+    display: flex;
+}
+
+.footer-contact .icon {
+    margin-right: 0.5rem;
+}
+
+.footer-social-media {
+    width: 30%;
+}
+
+.footer-social-media .icon a {
+    color: #fff;
+    margin-right: 0.25rem;
+    opacity: 0.5;
+}
+
+.footer-social-media .icon a:hover {
+    opacity: 1;
+}

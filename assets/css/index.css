@@ -1,0 +1,219 @@
+body {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    width: 60%;
+    margin: 3rem auto;
+    display: flex;
+    flex: 1;
+    font-size: 1rem;
+}
+
+/* posts */
+.posts {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+.posts .container {
+    padding: 1rem;
+    height: 7rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.posts .container:hover {
+    cursor: pointer;
+}
+
+.posts .container:hover .overlay {
+    display: block;
+}
+
+.posts .container .member1 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.posts .container .member1 .title-posts {
+    padding-bottom: 0.7rem;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    line-height: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 3rem;
+    font-size: 1rem;
+}
+
+.posts .container .member1 .title-posts h1 {
+    font-weight: 450;
+}
+
+.posts .author-posts {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.posts .author-name {
+    width: 60%;
+    color: rgb(76, 139, 221);
+}
+
+.tag-posts {
+    color: #0674EC;
+}
+
+.posts .container .member2 {
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFF1F5;
+    border-radius: 0.1rem;
+}
+
+/* categories */
+.categories {
+    width: 30%;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 ;
+}
+
+#new_post_button {
+    width: 100%;
+    background-color: #0674EC;
+    color: #fff;
+    height: 4rem;
+    border-radius: 0.3rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+#new_post_button i {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+#new_post_button:hover {
+    cursor: pointer;
+}
+
+/* pages */
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    margin-top: 1rem;
+}
+
+.pages .container {
+    width: 30%;
+    display: flex;
+    box-shadow: none;
+}
+
+.pages .container .member button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.pages .container .member button:hover {
+    color: #0674EC;
+}
+
+.pages .container .member button:hover {
+    color: #0674EC;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    height: 30vh;
+    width: 100%;
+    background: #192027;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer .container {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 30%;
+}
+
+.footer-logo .title a {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+footer .title {
+    height: 3.5rem;
+}
+
+footer h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+footer .content {
+    opacity: 0.6;
+}
+
+.footer-contact {
+    width: 20%;
+}
+
+.footer-contact .content .contact-info {
+    display: flex;
+}
+
+.footer-contact .icon {
+    margin-right: 0.5rem;
+}
+
+.footer-social-media {
+    width: 30%;
+}
+
+.footer-social-media .icon a {
+    color: #fff;
+    margin-right: 0.25rem;
+    opacity: 0.5;
+}
+
+.footer-social-media .icon a:hover {
+    opacity: 1;
+}

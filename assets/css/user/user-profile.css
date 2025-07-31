@@ -1,0 +1,143 @@
+.main {
+    min-height: 30rem;
+}
+
+.main .content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    width: 60%;
+    flex: 1;
+    margin: 5rem auto 5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.author {
+    padding: 2rem 3rem 4rem;
+    width: 30%;
+    border-right: 0.05rem;
+    border-right-color: #c7c7c7;
+    border-right-style: solid;
+}
+
+.profile-avatar {
+    margin: 0 auto 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.author h4 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#edit-avatar-button {
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    background-color: #0674EC;
+    color: #fff;
+    margin: 0 auto;
+}
+
+#edit-avatar-button:hover {
+    cursor: pointer;
+}
+
+#edit-avatar-button .icon {
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+}
+
+.author-info {
+    padding: 2rem 3rem 4rem;
+    width: 70%;
+}
+
+.author-info h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.author-info p {
+    margin-bottom: 0.1rem;
+    font-weight: 300;
+}
+
+.author-info span {
+    font-weight: 500;
+}
+
+.account-assistance {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.account-assistance button {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    background-color: #0674EC;
+}
+
+#change_email_button {
+    margin: 0 0.5rem;
+}
+
+#change_user_name_button:hover,
+#change_email_button:hover,
+#change_password_button:hover {
+    cursor: pointer;
+}
+
+
+#change_user_name_input,
+#change_email_input,
+#change_password_input,
+#change_password_again_input {
+    display: none;
+    margin-top: 1rem;
+    width: 100%;
+    background: rgb(244, 245, 248);
+    padding: 0.5rem 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+}
+
+#submit_button,
+#cancel_button {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+#submit_button {
+    background-color: #78C841;
+}
+
+#cancel_button {
+    background-color: #FB4141;
+}
+
+#submit_button:hover,
+#cancel_button:hover {
+    cursor: pointer;
+}
