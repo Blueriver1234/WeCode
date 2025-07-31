@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    margin: 3rem auto 5rem;
+    width: 30%;
+    flex: 1;
+}
+
+.main .container {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 0.5rem;
+}
+
+.sign-up-header {
+    padding-top: 4rem;
+    border-bottom: 0.005rem;
+    border-bottom-color: #c7c7c7;
+    border-bottom-width: 100%;
+    border-bottom-style: solid;
+}
+
+.sign-up-header h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+}
+
+.sign-up-header p {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.sign-up-form {
+    padding: 2rem 2rem 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.form-group input {
+    background: rgb(244, 245, 248);
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+#sign-up-button {
+    padding: 0.5rem;
+    background: #3D74B6;
+    color: #fff;
+    border-radius: 0.3rem;
+    width: 100%;
+    margin: 1rem 0 1rem;
+}
+
+.sign-up-form h5 {
+    text-align: center;
+}
+
+.sign-up-with {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 1rem;
+}
+
+#sign-up-with-google-button, #sign-up-with-facebook-button {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+#sign-up-with-google-button {
+    background: #0F9D58;
+}
+
+#sign-up-with-facebook-button {
+    background: #4267B2;
+}
+
+.sign-up-assist {
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.sign-up-assist a {
+    color: #73a4df;
+}
+
+.sign-up-assist a:hover {
+    color: #195ce2;
+}
+
+

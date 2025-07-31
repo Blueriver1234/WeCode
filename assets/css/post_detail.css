@@ -1,0 +1,14 @@
+body {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    width: 60%;
+    margin: 3rem auto;
+    display: flex;
+    flex: 1;
+    font-size: 1rem;
+}
