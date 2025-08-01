@@ -1,5 +1,5 @@
 body {
-    background: #fff;
+    background: #EFF1F5;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -11,4 +11,171 @@ body {
     display: flex;
     flex: 1;
     font-size: 1rem;
+    flex-direction: row;
+}
+
+/* feedback_box */
+.feedback_box {
+    position: fixed;
+}
+
+.feedback_box .container {
+    position: absolute;
+    top: 0;
+    left: -5rem;
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback_box button {
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: #fff;
+    margin-bottom: 1rem;
+}
+
+.feedback_box button:hover {
+    cursor: pointer;
+}
+
+#like_icon {
+    color: #E83E8C;
+    display: block;
+}
+
+#liked_icon {
+    display: none;
+    color: #E83E8C;
+}
+
+#reply_icon {
+    color: #58C9E9;
+}
+
+/* post */
+.header_and_content {
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 0.3rem;
+}
+
+.post {
+    position: relative;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 1rem 1rem 1.5rem;
+    border-bottom: 0.01rem;
+    border-bottom-color: rgb(199, 199, 199);
+    border-bottom-style: solid;
+}
+
+header h1 {
+    max-height: 4.5rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.post_info {
+    display: flex;
+    flex-direction: row;
+    color: #898F96;
+    justify-content: start;
+}
+
+.author {
+    max-width: 30%;
+    white-space: nowrap;
+    margin-right: 1rem;
+}
+
+.author i {
+    font-size: 1rem;
+
+}
+
+.author a {
+    font-size: 1rem;
+    font-weight: 200;
+    color: #0674EC;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.date {
+    max-width: 30%;
+    white-space: nowrap;
+    margin-right: 1rem;
+}
+
+.date i {
+    font-size: 1rem;
+}
+
+.date span {
+    font-size: 1rem;
+}
+
+.react_box {
+    max-width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.react_box p {
+    font-size: 1rem;
+    margin-right: 1rem;
+    white-space: nowrap;
+}
+
+.post_content {
+    padding: 1rem 1rem 3rem;
+}
+
+.post_content p {
+    white-space: pre-line;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+/* reply_section */
+.reply_section {
+    margin-top: 2rem;
+    background: #fff;
+    border-radius: 0.3rem;
+}
+
+/* categories */
+.categories {
+    width: 30%;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+#new_post_button {
+    width: 100%;
+    background-color: #0674EC;
+    color: #fff;
+    height: 4rem;
+    border-radius: 0.3rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+#new_post_button i {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+#new_post_button:hover {
+    cursor: pointer;
 }
