@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js"; // Added onAuthStateChanged
+import { getAuth, createUserWithEmailAndPassword, updateProfile, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js"; // Added onAuthStateChanged
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -46,17 +46,21 @@ signUpForm.addEventListener("submit", async (e) => { // Mark the function as asy
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
+    const currentTime = new Date().toISOString();
 
-    await set(ref(database, "users/" + user.uid), {
-      username: username,
-      email: email,
-      author_post: [],
-      lastLogin: "",
+    await updateProfile(user, {
+      displayName: username
     });
 
-    console.log("Account created successfully. Redirecting to sign-in page.");
-    window.location.href = "./sign-in.html";
-
+    await set(ref(database, "users/" + user.uid), {
+      displayName: username,
+      email: email,
+      author_post: [],
+      lastLogin: currentTime
+    });
+  
+    console.log("Account created successfully. Redirecting to homepage.");
+    window.location.href = "./index.html";
   } catch (error) {
     console.error("Registration failed:", error.code, error.message);
     let userFacingMessage = "Registration failed. Please try again.";
@@ -84,6 +88,7 @@ signUpForm.addEventListener("submit", async (e) => { // Mark the function as asy
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("User is already signed in:", user.email, user.uid);
+        window.location.href = "./index.html"
     } else {
         console.log("No user signed in.");
     }

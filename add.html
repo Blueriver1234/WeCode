@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeCode</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/post_detail.css">
+    <link rel="stylesheet" href="./assets/css/add.css">
     <link rel="stylesheet" href="./assets/css/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,11 +48,21 @@
         </div>
     </nav>
 
-    <div class="main">
-        
-    </div>
-
-
+    <form id="postForm">
+        <h2>Add a Post:</h2>
+        <br>
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" required>
+        <br>
+        <label for="postDescription">Description:</label>
+        <textarea id="postDescription" required></textarea>
+        <br>
+        <label for="postImage">Upload Image:</label>
+        <input type="file" id="postImage" accept="image/*" required>
+        <br>
+        <button type="submit">Add Post</button>
+    </form>
+    <a class="home" href="index.html"><button>Back to Home</button></a>
 
     <footer>
         <div class="container">
@@ -112,8 +122,9 @@
         </div>
     </footer>
 
-    <script type="module" src="./assets/js/post_detail.js"></script>
+    <script type="module" src="./assets/js/add.js"></script>
     <script type="module" src="./assets/js/logout.js"></script>
 
 </body>
+
 </html>
