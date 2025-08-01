@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
-
-=======
-// Import the functions you need from the SDKs you need
+// Firebase SDK imports (version 12.0.0 is used here, which is the newer one)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js"; // Added 'get'
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js"; // Added 'onAuthStateChanged'
+import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-// Your Firebase configuration
->>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
+// Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBmEuRloY4yc9yvKyQ9U2iK8Ob91_zxNkI",
     authDomain: "wecode-a7354.firebaseapp.com",
@@ -22,100 +15,64 @@ const firebaseConfig = {
     measurementId: "G-8948KFPN92"
 };
 
-<<<<<<< HEAD
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth(app);
 
+// DOM element references
 const signInForm = document.querySelector(".sign-in-form");
 const emailInput = document.getElementById("email-input");
 const passwordInput = document.getElementById("password-input");
 const errorMessageDisplay = document.getElementById("error-message");
-=======
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-const auth = getAuth(app); // Pass 'app' to getAuth for consistent initialization
 
-// Get references to HTML elements
-const signInForm = document.querySelector(".sign-in-form"); // Selecting the form directly
-const emailInput = document.getElementById("email-input");
-const passwordInput = document.getElementById("password-input");
-const errorMessageDisplay = document.getElementById("error-message"); // New element for errors
->>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
-
+// Handle sign-in
 signInForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const email = emailInput.value;
     const password = passwordInput.value;
-<<<<<<< HEAD
-=======
-
->>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
     errorMessageDisplay.textContent = "";
 
     try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
 
-<<<<<<< HEAD
-        // Cập nhật lastLogin
-=======
->>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
+        // Update last login time
         const currentTime = new Date().toISOString();
         await update(ref(database, "users/" + user.uid), {
             lastLogin: currentTime
         });
 
-<<<<<<< HEAD
-        // Lấy dữ liệu người dùng
+        // Retrieve user data
         const userSnapshot = await get(ref(database, "users/" + user.uid));
         let username = "User";
         let role = "user";
+
         if (userSnapshot.exists()) {
             const data = userSnapshot.val();
             username = data.username || "User";
             role = data.role || "user";
         }
 
-        // Lưu thông tin user vào localStorage
-=======
-        const userSnapshot = await get(ref(database, "users/" + user.uid));
-        let username = "User";
-        if (userSnapshot.exists()) {
-            username = userSnapshot.val().username || "User";
-        }
-
-<<<<<<< HEAD
->>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
+        // Store user info in localStorage
         const userInfo = {
             username: username,
             uid: user.uid,
             email: user.email,
-<<<<<<< HEAD
             role: role
-=======
->>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
         };
         localStorage.setItem("userInfo", JSON.stringify(userInfo));
         console.log("User info stored in localStorage:", userInfo);
 
-<<<<<<< HEAD
         alert("Signed in successfully!");
 
-        // Điều hướng theo role
+        // Redirect based on role
         if (role === "admin") {
             window.location.href = "./admin.html";
         } else {
             window.location.href = "./index.html";
         }
-=======
-=======
->>>>>>> 8853f414d26cc404f685cdf2460911d1f8fa7b89
-        alert("Signed in successfully!"); 
-        window.location.href = "./index.html";
->>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
 
     } catch (error) {
         console.error("Sign in failed:", error.code, error.message);
@@ -129,11 +86,7 @@ signInForm.addEventListener("submit", async (e) => {
                 userFacingMessage = "This user account has been disabled.";
                 break;
             case "auth/user-not-found":
-<<<<<<< HEAD
             case "auth/wrong-password":
-=======
-            case "auth/wrong-password": // It's a good practice to combine these for security, not revealing if user exists
->>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
                 userFacingMessage = "Incorrect email or password.";
                 break;
             case "auth/too-many-requests":
@@ -142,14 +95,16 @@ signInForm.addEventListener("submit", async (e) => {
             default:
                 userFacingMessage = "An unexpected error occurred: " + error.message;
         }
+
         errorMessageDisplay.textContent = userFacingMessage;
     }
 });
 
+// Auto-redirect if already signed in
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("User is already signed in:", user.email, user.uid);
-        window.location.href = "./index.html"
+        window.location.href = "./index.html";
     } else {
         console.log("No user signed in.");
     }
