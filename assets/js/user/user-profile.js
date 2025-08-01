@@ -38,9 +38,8 @@ onAuthStateChanged(auth, async (user) => {
   }
 
   const uid = user.uid;
-  const usernameDisplay = document.querySelector(".author h4");
   const emailDisplay = document.querySelector(".author-info p:nth-child(3)");
-  
+
   emailDisplay.innerHTML = `<span>Email:</span> ${user.email}`;
 
   // Fetch additional info from database
@@ -51,7 +50,8 @@ onAuthStateChanged(auth, async (user) => {
     const data = snapshot.val();
     document.querySelector(".author-info p:nth-child(2)").innerHTML = `<span>User name:</span> ${user.displayName || "N/A"}`;
     document.querySelector(".author-info p:nth-child(4)").innerHTML = `<span>Friends:</span> ${data.friends || 0}`;
-    document.querySelector(".author-info p:nth-child(5)").innerHTML = `<span>Post number:</span> ${data.author_post.length || 0}`;
+    const postCount = Array.isArray(data.author_post) ? data.author_post.length : 0;
+    document.querySelector(".author-info p:nth-child(5)").innerHTML = `<span>Post number:</span> ${postCount}`;
     document.querySelector(".author-info p:nth-child(6)").innerHTML = `<span>Likes gained:</span> ${data.likes || 0}`;
     document.querySelector(".author-info p:nth-child(7)").innerHTML = `<span>Replies gained:</span> ${data.replies || 0}`;
     document.querySelector(".author-info p:nth-child(8)").innerHTML = `<span>Joined in:</span> ${data.joinDate || "Unknown"}`;
