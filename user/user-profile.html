@@ -17,35 +17,26 @@
 </head>
 
 <body>
-
     <nav>
         <div class="container">
-            <div class="logo member">
-                <a href="../index.html">
-                    WeCode
-                </a>
-            </div>
-            <div class="searching-bar member">
-                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                <input type="text" placeholder="Search something . . ." id="searching-input">
-            </div>
-            <div class="announcement member">
-                <a href="">
-                    <i class="fa-solid fa-bell"></i>
-                </a>
-            </div>
-            <div class="sign-up member" id="sign-up">
-                <a href="../sign-up.html">
-                    Sign up
-                </a>
-            </div>
-            <div class="sign-in member">
-                <a href="../sign-in.html">
-                    Sign in
-                </a>
-            </div>
+          <div class="logo member"><a href="./index.html">WeCode</a></div>
+          <div class="searching-bar member">
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            <input type="text" placeholder="Search something . . ." id="searching-input" />
+          </div>
+          <div class="announcement member">
+            <a href="#"><i class="fa-solid fa-bell"></i></a>
+          </div>
+          <div class="sign-up member" id="sign-up">
+            <a href="./sign-up.html" class="sign-links">Sign up</a>
+          </div>
+          <div class="sign-in member">
+            <a href="./sign-in.html" class="sign-links">Sign in</a>
+          </div>
+          <span id="userInfo"></span>
+          <div id="logoutContainer" style="display:inline-block;"></div>
         </div>
-    </nav>
+      </nav>
 
     <div class="menu">
         <div class="container">
@@ -57,28 +48,11 @@
                 <i class="fa-solid fa-book"></i>
                 <a href="./user-posts.html">Posts</a>
             </div>
-            <div class="member">
-                <i class="fa-solid fa-bell"></i>
-                <a href="./user-notifications.html">Notifications</a>
-            </div>
         </div>
     </div>
 
     <div class="main">
         <div class="content">
-            <div class="author">
-                <div class="profile-avatar">
-                    <img src="https://sadesign.vn/pictures/picfullsizes/2024/11/30/phan-mem-photoshop-1.jpg"
-                        alt="avatar">
-                </div>
-                <h4>Trần Văn Tiến</h4>
-                <button type="submit" id="edit-avatar-button">
-                    <div class="icon">
-                        <i class="fa-solid fa-camera"></i>
-                    </div>
-                    <p>Edit avatar</p>
-                </button>
-            </div>
             <div class="author-info">
                 <h2>Your account's information</h2>
                 <p><span>User name:</span> Trần Văn Tiến</p>
@@ -165,7 +139,8 @@
         </div>
     </footer>
 
-    <script src="../assets/js/user/user-profile.js"></script>
+    <script type="module" src="../assets/js/user/user-profile.js"></script>
+    <script type="module" src="../assets/js/logout.js"></script>
 
 
 </body>

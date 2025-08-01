@@ -11,7 +11,7 @@ const firebaseConfig = {
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js"; // Added onAuthStateChanged
+import { getAuth, createUserWithEmailAndPassword, updateProfile, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js"; // Added onAuthStateChanged
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -71,7 +71,9 @@ signUpForm.addEventListener("submit", async (e) => { // Mark the function as asy
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
+    const currentTime = new Date().toISOString();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Xác định role: admin@gmail.com -> admin, còn lại user
     const role = (email === "admin@gmail.com") ? "admin" : "user";
@@ -87,11 +89,21 @@ signUpForm.addEventListener("submit", async (e) => { // Mark the function as asy
 >>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
       author_post: [],
       lastLogin: "",
+=======
+    await updateProfile(user, {
+      displayName: username
+>>>>>>> 8853f414d26cc404f685cdf2460911d1f8fa7b89
     });
 
-    console.log("Account created successfully. Redirecting to sign-in page.");
-    window.location.href = "./sign-in.html";
-
+    await set(ref(database, "users/" + user.uid), {
+      displayName: username,
+      email: email,
+      author_post: [],
+      lastLogin: currentTime
+    });
+  
+    console.log("Account created successfully. Redirecting to homepage.");
+    window.location.href = "./index.html";
   } catch (error) {
     console.error("Registration failed:", error.code, error.message);
     let userFacingMessage = "Registration failed. Please try again.";
@@ -119,6 +131,7 @@ signUpForm.addEventListener("submit", async (e) => { // Mark the function as asy
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("User is already signed in:", user.email, user.uid);
+        window.location.href = "./index.html"
     } else {
         console.log("No user signed in.");
     }

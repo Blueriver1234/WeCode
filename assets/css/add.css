@@ -1,0 +1,109 @@
+form {
+    position: absolute;
+    top: 100px;
+    width: 80%;
+    left: 10%;
+    height: fit-content;
+}
+
+form label,
+form input,
+form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.home {
+    position: absolute;
+    top: 459px;
+    left: 250px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    height: 30vh;
+    width: 100%;
+    background: #192027;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer .container {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 30%;
+}
+
+.footer-logo .title a {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+footer .title {
+    height: 3.5rem;
+}
+
+footer h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+footer .content {
+    opacity: 0.6;
+}
+
+.footer-contact {
+    width: 20%;
+}
+
+.footer-contact .content .contact-info {
+    display: flex;
+}
+
+.footer-contact .icon {
+    margin-right: 0.5rem;
+}
+
+.footer-social-media {
+    width: 30%;
+}
+
+.footer-social-media .icon a {
+    color: #fff;
+    margin-right: 0.25rem;
+    opacity: 0.5;
+}
+
+.footer-social-media .icon a:hover {
+    opacity: 1;
+}
+
+footer {
+    position: absolute;
+    top: 600px;
+}

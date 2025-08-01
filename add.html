@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeCode</title>   
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/sign-in.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>WeCode</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/add.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    
+
     <nav>
         <div class="container">
-            <div class="logo member">                
+            <div class="logo member">
                 <a href="./index.html">
                     WeCode
                 </a>
             </div>
+            <div class="searching-bar member">
+                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                <input type="text" placeholder="Search something . . ." id="searching-input">
+            </div>
+            <div class="announcement member">
+                <a href="">
+                    <i class="fa-solid fa-bell"></i>
+                </a>
+            </div>
+            <div class="sign-up member" id="sign-up">
+                <a href="./sign-up.html" class="sign-links">
+                    Sign up
+                </a>
+            </div>
+            <div class="sign-in member">
+                <a href="./sign-in.html" class="sign-links">
+                    Sign in
+                </a>
+            </div>
+            <a href="./user/user-profile.html" id="userInfo"></a>
+            <div id="logoutContainer" style="display:inline-block;"></div>
         </div>
     </nav>
 
-    <div class="main">
-        <div class="container">
-            <div class="sign-in-header">
-                <h3>Hello</h3>
-                <p>Sign in your account</p>
-            </div>
-            <form class="sign-in-form">
-                <div class="form-group">
-                    <label for="email-input">Email:</label> <!-- Fixed: removed # from for="" -->
-                    <input type="email" id="email-input" placeholder="Type your registered email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password-input">Password:</label> <!-- Fixed: removed # from for="" -->
-                    <input id="password-input" placeholder="Type your password" type="password" required>
-                </div>
-                
-                <!-- NEW: Div for displaying error messages -->
-                <div id="error-message" style="color: red; margin-top: 10px; text-align: center;"></div>
-
-                <button type="submit" id="sign-in-button">Sign in</button>
-                <h5>- or -</h5>
-                <div class="sign-in-with">
-                    <button id="sign-in-with-google-button" type="submit">
-                        Sign in with <span><i class="fab fa-google"></i></span> google
-                    </button>                  
-                </div>
-                <div class="sign-in-assist">
-                    <p>Don't have an account? <a href="./sign-up.html">Sign up</a></p>
-                </div>
-            </form>              
-        </div>
-    </div>
+    <form id="postForm">
+        <h2>Add a Post:</h2>
+        <br>
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" required>
+        <br>
+        <label for="postDescription">Description:</label>
+        <textarea id="postDescription" required></textarea>
+        <br>
+        <label for="postImage">Upload Image:</label>
+        <input type="file" id="postImage" accept="image/*" required>
+        <br>
+        <button type="submit">Add Post</button>
+    </form>
+    <a class="home" href="index.html"><button>Back to Home</button></a>
 
     <footer>
         <div class="container">
@@ -110,12 +117,14 @@
                     <a href="">
                         <i class="fab fa-youtube"></i>
                     </a>
-                </div>                                
+                </div>
             </div>
         </div>
     </footer>
 
-    <script type="module" src="./assets/js/sign-in.js"></script>
+    <script type="module" src="./assets/js/add.js"></script>
+    <script type="module" src="./assets/js/logout.js"></script>
 
 </body>
+
 </html>

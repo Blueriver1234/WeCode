@@ -5,9 +5,9 @@ import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https:/
 
 =======
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js"; // Added 'get'
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"; // Added 'onAuthStateChanged'
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js"; // Added 'get'
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js"; // Added 'onAuthStateChanged'
 
 // Your Firebase configuration
 >>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
@@ -16,7 +16,7 @@ const firebaseConfig = {
     authDomain: "wecode-a7354.firebaseapp.com",
     databaseURL: "https://wecode-a7354-default-rtdb.firebaseio.com/",
     projectId: "wecode-a7354",
-    storageBucket: "wecode-a7354.firebasestorage.app",
+    storageBucket: "wecode-a7354.appspot.com",
     messagingSenderId: "6754148212",
     appId: "1:6754148212:web:bc228ac7650b666ef75621",
     measurementId: "G-8948KFPN92"
@@ -82,11 +82,12 @@ signInForm.addEventListener("submit", async (e) => {
         // Lưu thông tin user vào localStorage
 =======
         const userSnapshot = await get(ref(database, "users/" + user.uid));
-        let username = "User"; // Default username
+        let username = "User";
         if (userSnapshot.exists()) {
             username = userSnapshot.val().username || "User";
         }
 
+<<<<<<< HEAD
 >>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
         const userInfo = {
             username: username,
@@ -110,6 +111,8 @@ signInForm.addEventListener("submit", async (e) => {
             window.location.href = "./index.html";
         }
 =======
+=======
+>>>>>>> 8853f414d26cc404f685cdf2460911d1f8fa7b89
         alert("Signed in successfully!"); 
         window.location.href = "./index.html";
 >>>>>>> ae0e8e52c0c5ea6ec59ede020262daa21b1fd28b
@@ -146,6 +149,7 @@ signInForm.addEventListener("submit", async (e) => {
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("User is already signed in:", user.email, user.uid);
+        window.location.href = "./index.html"
     } else {
         console.log("No user signed in.");
     }
