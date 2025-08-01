@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - WeCode</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <link rel="stylesheet" href="./assets/css/admin.css" />
+</head>
+
+<body>
+  <div class="admin-container">
+    <h1>Admin Dashboard</h1>
+    <p>Only admins can see this page.</p>
+
+    <div class="admin-cards">
+      <div class="admin-card">
+        <h2>Total Users</h2>
+        <p id="total-users">0</p>
+      </div>
+      <div class="admin-card">
+        <h2>Total Posts</h2>
+        <p id="total-posts">0</p>
+      </div>
+    </div>
+
+    <h2>Recent Users</h2>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody id="user-list">
+        <!-- This will be filled dynamically later -->
+      </tbody>
+    </table>
+    <h2>Recent Posts</h2>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Views</th>
+        </tr>
+      </thead>
+      <tbody id="post-list">
+        <!-- Filled dynamically -->
+      </tbody>
+    </table>
+
+  </div>
+
+  <script type="module" src="./assets/js/logout.js"></script>
+  <script type="module" src="./assets/js/admin.js"></script>
+</body>
+
+</html>

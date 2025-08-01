@@ -1,5 +1,5 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-const auth = getAuth();
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -13,12 +13,12 @@ const firebaseConfig = {
   measurementId: "G-8948KFPN92"
 };
 
+const auth = getAuth();
+
 function logout() {
   signOut(auth)
     .then(() => {
       console.log("User signed out");
-      // Optional: Clear any app-specific localStorage here
-      localStorage.removeItem("userInfo");
     })
     .catch((error) => {
       console.error("Error signing out:", error);

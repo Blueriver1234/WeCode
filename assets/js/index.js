@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 // Firebase config
 const firebaseConfig = {
@@ -62,8 +63,8 @@ function createPostElement(post, query = "") {
           </div>
         </div>
       </div>
-      <div class="member2 view-number"><h1>${views}</h1><h1>View</h1></div>
-      <div class="member2 reply-number"><h1>${comments}</h1><h1>Reply</h1></div>
+      <div class="member2 view-number"><h1>${views}</h1><h1>Views</h1></div>
+      <div class="member2 reply-number"><h1>${comments}</h1><h1>Replies</h1></div>
     </div>
   </a>
 `;
@@ -123,10 +124,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   loadPosts();
-
-  const userInfo = JSON.parse(localStorage.getItem("userInfo") || "{}");
-  const userSpan = document.getElementById("userInfo");
-  if (userSpan && userInfo.username) {
-    userSpan.textContent = userInfo.username;
-  }
 });

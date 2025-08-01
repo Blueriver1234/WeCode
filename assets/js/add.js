@@ -32,7 +32,7 @@ onAuthStateChanged(auth, (user) => {
         user_now = user;
     } else {
         alert("You must be signed in to post.");
-        window.location.href = "login.html";
+        window.location.href = "./sign-in.html";
     }
 });
 

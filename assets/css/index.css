@@ -217,8 +217,3 @@ footer .content {
 .footer-social-media .icon a:hover {
     opacity: 1;
 }
-
-footer {
-    position: absolute;
-    top: 600px;
-}
