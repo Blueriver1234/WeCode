@@ -64,7 +64,7 @@ async function loadDashboard() {
   userList.innerHTML = "";
   Object.values(users).forEach(u => {
     const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${u.username || "Unknown"}</td>
+    tr.innerHTML = `<td>${u.displayName || "Unknown"}</td>
                     <td>${u.email || ""}</td>
                     <td>${u.role || "user"}</td>`;
     userList.appendChild(tr);
