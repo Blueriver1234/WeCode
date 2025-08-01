@@ -50,22 +50,34 @@ function createPostElement(post, query = "") {
 
 
   return `
-  <a href="post_detail.html?id=${post.postID}" class="post-link">
-    <div class="container">
-      <div class="overlay"></div>
-      <div class="member1">
-        <div class="title-posts"><h1>${highlightedTitle}</h1></div>
-        <div class="infor-posts">
-          <div class="author-posts">
-            <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
-            <div class="author-name"><h1>${escapeHTML(author)}</h1></div>
-            <div class="time-posts"><h1>${timeAgo(timestamp)}</h1></div>
+<a href="post_detail.html?id=${post.postID}" class="post-link">
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="member1">
+      <div class="title-posts">
+        <h1>${highlightedTitle}</h1>
+      </div>
+      <div class="infor-posts">
+        <div class="author-posts">
+          <div class="author_avatar_and_name">
+            <img src="https://ictgo.vn/wp-content/uploads/2025/04/PTS-Phan-mem.jpg" alt="">
+            <h1>${escapeHTML(author)}</h1>
+          </div>
+          <div class="time-posts">
+            <h1>${timeAgo(timestamp)}</h1>
           </div>
         </div>
       </div>
-      <div class="member2 view-number"><h1>${views}</h1><h1>Views</h1></div>
-      <div class="member2 reply-number"><h1>${comments}</h1><h1>Replies</h1></div>
     </div>
+    <div class="member2 view-number">
+      <h1>${views}</h1>
+      <h1>Views</h1>
+    </div>
+    <div class="member2 reply-number">
+      <h1>${comments}</h1>
+      <h1>Replies</h1>
+    </div>
+  </div>
   </a>
 `;
 }

@@ -11,6 +11,7 @@ body {
     display: flex;
     flex: 1;
     font-size: 1rem;
+    max-height: max-content;
 }
 
 /* posts */
@@ -19,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #000;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .posts .container {
@@ -28,10 +30,10 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    margin-bottom: 0.3rem;
-    border-radius: 0.3rem;
     background-color: #fff;
+    border-bottom: 0.01rem;
+    border-bottom-color: rgb(199, 199, 199);
+    border-bottom-style: solid;
 }
 
 .posts .container:hover {
@@ -56,15 +58,15 @@ body {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-clamp: 2;
-    line-height: 1.5rem;
+    line-height: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 3rem;
+    max-height: 2rem;
     font-size: 1rem;
 }
 
 .posts .container .member1 .title-posts h1 {
-    font-weight: 450;
+    font-weight: 300;
 }
 
 .posts .author-posts {
@@ -73,13 +75,23 @@ body {
     justify-content: space-between;
 }
 
-.posts .author-name {
-    width: 60%;
-    color: rgb(76, 139, 221);
+.author_avatar_and_name {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.tag-posts {
-    color: #0674EC;
+.author_avatar_and_name img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.author_avatar_and_name h1, .time-posts h1 {
+    font-size: 1rem;
 }
 
 .posts .container .member2 {
@@ -90,7 +102,11 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #EFF1F5;
-    border-radius: 0.1rem;
+    border-radius: 0.3rem;
+}
+
+.posts .container .member2 h1 {
+    font-size: 1rem;
 }
 
 /* categories */
