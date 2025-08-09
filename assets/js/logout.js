@@ -6,6 +6,7 @@ const auth = getAuth();
 function logout() {
   signOut(auth)
     .then(() => {
+      localStorage.clear;
       console.log("User signed out");
     })
     .catch((error) => {
@@ -29,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // Show user info
       userInfoDiv.textContent = user.displayName || "Logged in";
+      localStorage.setItem("displayName", user.displayName)
 
       // Hide sign-in/sign-up links
       document.querySelectorAll(".sign-links").forEach(link => {

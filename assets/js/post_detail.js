@@ -196,7 +196,7 @@ function setupComments() {
       if (!text) return;
       const comment = {
         text,
-        author: localStorage.getItem('username') || "Anonymous",
+        author: localStorage.getItem("displayName") || "Anonymous",
         timestamp: Date.now(),
         likes: 0
       };
@@ -211,7 +211,6 @@ function setupComments() {
 
 // Like button logic
 const like_button = document.querySelector("#like_button");
-const reply_button = document.querySelector("#reply_button");
 const like_icon = document.querySelector("#like_icon");
 const liked_icon = document.querySelector("#liked_icon");
 

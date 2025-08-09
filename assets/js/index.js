@@ -48,7 +48,6 @@ function createPostElement(post, query = "") {
     highlightedTitle = highlightedTitle.replace(regex, (match) => `<mark>${match}</mark>`);
   }
 
-
   return `
 <a href="post_detail.html?id=${post.postID}" class="post-link">
   <div class="container">
@@ -100,10 +99,22 @@ function loadPosts() {
   onValue(postsRef, (snapshot) => {
     const data = snapshot.val();
     const posts = data ? Object.values(data).sort((a, b) => b.timestamp - a.timestamp) : [];
+
+    posts.forEach((post) => {
+      const commentsRef = ref(database, `comments/${post.postID}`);
+      onValue(commentsRef, (commentSnap) => {
+        let count = 0;
+        commentSnap.forEach(() => count++);
+        post.comments = count; // attach count to post
+        renderPosts(posts); // re-render when comment count updates
+      });
+    });
+
     allPosts = posts;
     renderPosts(allPosts);
   });
 }
+
 
 // Search handler
 const searchInput = document.getElementById("searching-input");

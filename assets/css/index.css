@@ -12,6 +12,7 @@ body {
     flex: 1;
     font-size: 1rem;
     max-height: max-content;
+    min-height: 200px;
 }
 
 /* posts */

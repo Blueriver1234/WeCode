@@ -44,48 +44,79 @@ document.getElementById("postForm").addEventListener("submit", function (event) 
     const description = document.getElementById("postDescription").value;
     const imageFile = document.getElementById("postImage").files[0];
 
-    if (!imageFile) {
-        alert("Please select an image to upload.");
-        return;
+    if (imageFile) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const base64Image = e.target.result;
+
+            const newPostRef = push(ref(database, 'posts'));
+            const postID = newPostRef.key;
+
+            set(newPostRef, {
+                title: title,
+                author: user_now.displayName || user_now.email || "Anonymous",
+                timestamp: Date.now(),
+                description: description,
+                image: base64Image,
+                views: 0,
+                ownerID: user_now.uid,
+                comments: [],
+                postID: postID
+            }).then(() => {
+                alert("Post added successfully!");
+                window.location.href = "index.html";
+            }).catch((error) => {
+                alert("Failed to add post: " + error.message);
+            });
+
+            // Update user's list of authored posts
+            const userRef = ref(database, 'users/' + user_now.uid);
+
+            get(userRef).then((snapshot) => {
+                const userData = snapshot.val();
+                const authorPosts = userData?.author_post || [];
+                authorPosts.push(postID);
+                update(userRef, {
+                    author_post: authorPosts
+                });
+            });
+        };
+
+        reader.readAsDataURL(imageFile); // Converts image to base64
+    } else {
+        const newPostRef = push(ref(database, 'posts'));
+            const postID = newPostRef.key;
+
+            set(newPostRef, {
+                title: title,
+                author: user_now.displayName || user_now.email || "Anonymous",
+                timestamp: Date.now(),
+                description: description,
+                image: null,
+                views: 0,
+                ownerID: user_now.uid,
+                comments: [],
+                postID: postID
+            }).then(() => {
+                alert("Post added successfully!");
+                window.location.href = "index.html";
+            }).catch((error) => {
+                alert("Failed to add post: " + error.message);
+            });
+
+            // Update user's list of authored posts
+            const userRef = ref(database, 'users/' + user_now.uid);
+
+            get(userRef).then((snapshot) => {
+                const userData = snapshot.val();
+                const authorPosts = userData?.author_post || [];
+                authorPosts.push(postID);
+                update(userRef, {
+                    author_post: authorPosts
+                });
+            });
     }
 
-    const reader = new FileReader();
 
-    reader.onload = function (e) {
-        const base64Image = e.target.result;
-
-        const newPostRef = push(ref(database, 'posts'));
-        const postID = newPostRef.key;
-
-        set(newPostRef, {
-            title: title,
-            author: user_now.displayName || user_now.email || "Anonymous",
-            timestamp: Date.now(),
-            description: description,
-            image: base64Image,
-            views: 0,
-            ownerID: user_now.uid,
-            comments: [],
-            postID: postID
-        }).then(() => {
-            alert("Post added successfully!");
-            window.location.href = "index.html";
-        }).catch((error) => {
-            alert("Failed to add post: " + error.message);
-        });
-
-        // Update user's list of authored posts
-        const userRef = ref(database, 'users/' + user_now.uid);
-
-        get(userRef).then((snapshot) => {
-            const userData = snapshot.val();
-            const authorPosts = userData?.author_post || [];
-            authorPosts.push(postID);
-            update(userRef, {
-                author_post: authorPosts
-            });
-        });
-    };
-
-    reader.readAsDataURL(imageFile); // Converts image to base64
 });
